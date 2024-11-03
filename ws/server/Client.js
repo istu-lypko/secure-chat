@@ -19,6 +19,12 @@ class Client {
         });
     }
 
+    updateWS(ws) {
+        this.ws.terminate();
+
+        this.ws = ws;
+    }
+
     send(msgObject) {
         this.ws.send(JSON.stringify(msgObject));
     }
